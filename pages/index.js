@@ -1,12 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { Container } from "../components/container";
+import LandingContent from "../components/landing-content";
 
 export default function Home() {
   return (
-    <Container>
-      <h1 className="text-3xl font-bold underline">HomePage</h1>
-    </Container>
+    <div>
+      <LandingContent />
+    </div>
   );
 }
