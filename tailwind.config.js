@@ -4,7 +4,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: (theme) => ({
+        "background-pattern": "url('/assests/bg-image.png')",
+      }),
+    },
   },
   plugins: [],
 };
