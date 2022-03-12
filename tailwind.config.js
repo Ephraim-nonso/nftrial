@@ -8,6 +8,9 @@ module.exports = {
       backgroundImage: (theme) => ({
         "background-pattern": "url('/assests/bg-image.png')",
       }),
+      fontFamily: {
+        grotesk: ['Space Grotesk', 'sans-serif']
+      }
     },
   },
   plugins: [],
