@@ -2,9 +2,30 @@ import React from "react";
 import Link from "next/link";
 import { Container } from "../components/container";
 import { Hamburger } from "./hamburger";
+import { ethers } from "ethers";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
+  const [connected, setConnected] = React.useState("");
+
+  const checkIfWalletIsConnected = async () => {
+    try {
+      const { ethereum } = window;
+      const accounts = await ethereum.request({ method: "eth_accounts" });
+      if (accounts.length !== 0) {
+        const account = accounts[0];
+        setConnected("Connected");
+      } else {
+        setConnected("Connect Wallet");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  React.useEffect(() => {
+    checkIfWalletIsConnected();
+  }, []);
   return (
     <Container>
       <nav className="pt-12 pb-10 xl:pb-20 flex justify-between items-center font-grotesk">
@@ -36,7 +57,7 @@ const Navbar = () => {
 
         <Link href="/wallet" passHref>
           <div className=" cursor-pointer rounded-xl hidden xl:flex items-center justify-center text-2xl leading-7 font-normal bg-[#55A630] text-white w-56 h-24">
-            <h4>Connect Wallet</h4>
+            <h4>{connected}</h4>
           </div>
         </Link>
       </nav>
@@ -59,7 +80,7 @@ const Navbar = () => {
           <li>
             <Link href="/wallet" passHref>
               <div className=" cursor-pointer rounded-xl flex items-center justify-center text-sm leading-6 font-normal bg-[#55A630] text-white w-28 h-12">
-                <h4>Connect Wallet</h4>
+                <h4>{connected}</h4>
               </div>
             </Link>
           </li>
