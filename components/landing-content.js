@@ -5,10 +5,24 @@ import LandingImage from "../assests/landing-page-image.png";
 import { LandingArrow } from "./landing-arrow";
 
 export default function LandingContent() {
+  const details = [
+    {
+      value: "1 NFT",
+      description: "PER DAY",
+    },
+    {
+      value: "10K +",
+      description: " ARTS",
+    },
+    {
+      value: "1",
+      description: "TRIAL",
+    },
+  ];
   return (
     <Container>
       <div className="flex flex-col order-2 xl:order-none xl:flex-row justify-between items-center w-full xl:pr-12">
-        <div className="w-full flex xl:hidden items-center justify-center mb-9 xl:mb-0 xl:max-w-[35%] h-[663px]">
+        <div className="w-full flex xl:hidden items-center justify-center mb-9 xl:mb-0 xl:max-w-[35%] xl:h-[663px]">
           <Image
             objectFit="contain"
             className="w-full h-full"
@@ -44,29 +58,19 @@ export default function LandingContent() {
           />
         </div>
       </div>
-      <div className="pt-6 pb-20 flex flex-col w-full  items-center  xl:items-start  space-y-5">
-        <div className="flex w-full justify-between xl:justify-start xl:space-x-20">
-          <p className="max-w-[150px] w-full text-white text-center font-normal text-4xl leading-[45px]">
-            1 NFT
-          </p>
-          <p className="max-w-[150px] w-full text-white text-center font-normal text-4xl leading-[45px]">
-            10K +
-          </p>
-          <p className="max-w-[150px] w-full text-white text-center font-normal text-4xl leading-[45px]">
-            1
-          </p>
-        </div>
-        <div className="flex w-full xl:justify-start justify-between xl:space-x-20">
-          <p className="max-w-[150px] w-full text-white text-center font-normal text-4xl leading-[52px]">
-            PER DAY
-          </p>
-          <p className="max-w-[150px] w-full text-white text-center font-normal text-4xl leading-[52px]">
-            ARTS
-          </p>
-          <p className="max-w-[150px] w-full text-white text-center font-normal text-4xl leading-[52px]">
-            TRIAL
-          </p>
-        </div>
+      <div className="pt-6 pb-20 flex flex-col space-y-10 sm:space-y-0 sm:flex-row w-full  items-center justify-between xl:justify-start  xl:items-start  xl:space-x-20">
+        {details &&
+          details.map(({ value, description }) => {
+            return (
+              <div
+                key={value}
+                className="max-w-[150px] w-full text-white text-center font-normal text-4xl leading-[45px] space-y-5 uppercase"
+              >
+                <p>{value}</p>
+                <p>{description}</p>
+              </div>
+            );
+          })}
       </div>
     </Container>
   );
