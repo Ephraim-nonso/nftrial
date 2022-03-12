@@ -7,15 +7,15 @@ const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   return (
     <Container>
-      <nav className="pt-12 pb-10 xl:pb-20 flex justify-between items-center">
+      <nav className="pt-12 pb-10 xl:pb-20 flex justify-between items-center font-grotesk">
         <div className="flex justify-between w-full xl:w-auto">
           <Link href="/" passHref={true} className="no-underline">
-            <h3 className="text-2xl leading-[45px] cursor-pointer lg:text-5xl text-[#FF9100] font-normal lg:leading-[61px]">
+            <h3 className="text-2xl leading-[45px] cursor-pointer lg:text-5xl text-[#FF9100] font-normal lg:leading-[61px] font-grotesk">
               NFTrials
             </h3>
           </Link>
           <button
-            className="xl:hidden focus:bg-transparent"
+            className="cursor-pointer xl:hidden focus:bg-transparent"
             onClick={() => setOpen(!open)}
           >
             <Hamburger className="fill-white" />
@@ -58,7 +58,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link href="/wallet" passHref>
-              <div className="rounded-xl flex items-center justify-center text-sm leading-6 font-normal bg-[#55A630] text-white w-28 h-12">
+              <div className=" cursor-pointer rounded-xl flex items-center justify-center text-sm leading-6 font-normal bg-[#55A630] text-white w-28 h-12">
                 <h4>Connect Wallet</h4>
               </div>
             </Link>

@@ -32,13 +32,13 @@ export default function LandingContent() {
           />
         </div>
         <div className="w-full xl:max-w-[46%] flex flex-col items-center xl:items-start space-y-7 xl:space-y-14 justify-center">
-          <p className="text-white font-normal text-2xl leading-6 xl:leading-[61px] xl:text-5xl">
+          <p className="text-white font-normal text-2xl leading-6 xl:leading-[61px] xl:text-5xl font-grotesk">
             Discover, Showcase & Win{" "}
           </p>
           <p className="text-4xl leading-[45px] xl:leading-[104px] text-center xl:text-left xl:text-7xl text-[#FF9100] font-normal">
             Your Favorite African Heritage NFTs
           </p>
-          <div className="w-56 h-16 xl:w-80 xl:h-20 flex bg-white items-center space-x-7 justify-center font-normal text-2xl leading-6  xl:text-4xl xl:leading-[45px] ">
+          <div className="w-56 h-16 xl:w-80 xl:h-20 flex bg-white items-center space-x-7 justify-center font-normal text-2xl leading-6  xl:text-4xl xl:leading-[45px] font-grotesk">
             <p>DISCOVER</p>
             <div className="hidden xl:flex">
               <LandingArrow width={35} height={35} />
@@ -58,7 +58,7 @@ export default function LandingContent() {
           />
         </div>
       </div>
-      <div className="pt-6 pb-20 flex flex-col space-y-10 sm:space-y-0 sm:flex-row w-full  items-center justify-between xl:justify-start  xl:items-start  xl:space-x-20">
+      <div className="pt-6 pb-20 flex flex-col space-y-10 sm:space-y-0 sm:flex-row w-full  items-center justify-between xl:justify-start  xl:items-start  xl:space-x-20 font-grotesk">
         {details &&
           details.map(({ value, description }) => {
             return (
