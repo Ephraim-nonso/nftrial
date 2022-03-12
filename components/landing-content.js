@@ -17,7 +17,7 @@ export default function LandingContent() {
             src={LandingImage}
           />
         </div>
-        <div className="w-full xl:max-w-[45%] flex flex-col items-center xl:items-start space-y-7 xl:space-y-14 justify-center">
+        <div className="w-full xl:max-w-[46%] flex flex-col items-center xl:items-start space-y-7 xl:space-y-14 justify-center">
           <p className="text-white font-normal text-2xl leading-6 xl:leading-[61px] xl:text-5xl">
             Discover, Showcase & Win{" "}
           </p>
@@ -34,7 +34,7 @@ export default function LandingContent() {
             </div>
           </div>
         </div>
-        <div className="w-full hidden xl:flex max-w-[35%] h-[663px]">
+        <div className="w-full hidden xl:flex max-w-[36%] h-[663px]">
           <Image
             objectFit="contain"
             className="w-full h-full"

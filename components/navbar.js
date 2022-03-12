@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <Container>
       <nav className="pt-12 pb-20 flex justify-between items-center">
-        <Link href="/" className="no-underline">
+        <Link href="/" passHref={true} className="no-underline">
           <h3 className="text-5xl text-[#FF9100] font-normal leading-[61px]">
             NFTrials
           </h3>
@@ -18,13 +18,13 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/leaderboard">
+            <Link href="/leaderboard" passHref={true}>
               <a>Leaderboard</a>
             </Link>
           </li>
         </ul>
 
-        <Link href="/wallet">
+        <Link href="/wallet" passHref={true}>
           <div className="rounded-xl hidden xl:flex items-center justify-center text-2xl leading-7 font-normal bg-[#55A630] text-white w-56 h-24">
             <h4>Connect Wallet</h4>
           </div>
