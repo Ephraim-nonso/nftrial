@@ -64,10 +64,10 @@ export default function LandingContent() {
             return (
               <div
                 key={value}
-                className="max-w-[150px] w-full text-white text-center font-normal text-4xl leading-[45px] space-y-5 uppercase"
+                className="max-w-[150px] w-full text-white text-center font-normal text-4xl leading-[45px] uppercase"
               >
                 <p>{value}</p>
-                <p>{description}</p>
+                <p className="leading-[52px]">{description}</p>
               </div>
             );
           })}
