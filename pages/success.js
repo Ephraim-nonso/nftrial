@@ -6,10 +6,12 @@ import Image from "next/image";
 function Success() {
   return (
     <Container>
-      <div className="flex justify-between py-12 px-7">
+      <div className="sm:flex justify-between py-12 px-7">
         <div>
           <div className="font-cont">
-            <h1 className="text-white text-4xl font-bold">Congratulations</h1>
+            <h1 className="text-white text-4xl font-bold font-grotesk">
+              Congratulations
+            </h1>
           </div>
           <div className=" mt-5">
             <Image
@@ -21,16 +23,16 @@ function Success() {
           </div>
         </div>
 
-        <div className="my-auto">
+        <div className="my-auto font-grotesk">
           {/* Congratulations of the winner. */}
           <div className="py-3">
             <h4 className="text-white tracking-wide text-xl font-medium mb-10">
               You just won:
             </h4>
-            <h2 className="text-4xl text-orange-500 font-bold py-3">
+            <h2 className="text-4xl text-[#FF9100] font-bold py-3">
               TERRAFORMA WOMAN
             </h2>
-            <p className="w-56 tracking-wide text-white">
+            <p className="w-60 tracking-wide text-white">
               A celebration of the African culture by an African artist.
             </p>
           </div>
