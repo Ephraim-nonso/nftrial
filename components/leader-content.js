@@ -37,7 +37,7 @@ export default function LeaderContent() {
   ];
   return (
     <Container>
-      <div className="flex items-center space-x-5 xl:space-x-20">
+      <div className="flex items-center space-x-5 xl:space-x-20 font-grotesk">
         <div className="hidden cursor-pointer xl:flex">
           <Link href="/" passHref={true}>
             <BackArrow width={42} height={65} />
@@ -52,7 +52,7 @@ export default function LeaderContent() {
           Leaderboards
         </p>
       </div>
-      <div className="bg-white flex flex-col space-y-4 xl:space-y-10 rounded-[25px] xl:rounded-[50px] w-full mt-12 p-10 pr-8 text-4xl leading-[45px]">
+      <div className="bg-white flex flex-col space-y-4 xl:space-y-10 rounded-[25px] xl:rounded-[50px] w-full mt-12 p-10 pr-8 text-4xl leading-[45px] font-grotesk">
         {scores &&
           scores.map(({ number, address, images }) => {
             return (
