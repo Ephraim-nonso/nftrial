@@ -1,5 +1,6 @@
 import React from "react";
 import { WalletWrapper } from "../components/walletWrapper";
+
 import Wallet from "../components/wallet"
 function WalletPage() {
   return (

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Container } from "./container";
 import LandingImage from "../assests/landing-page-image.png";
 import { LandingArrow } from "./landing-arrow";
+import Link from "next/link";
 
 export default function LandingContent() {
   const details = [
@@ -38,15 +39,15 @@ export default function LandingContent() {
           <p className="text-4xl leading-[45px] xl:leading-[104px] text-center xl:text-left xl:text-7xl text-[#FF9100] font-normal">
             Your Favorite African Heritage NFTs
           </p>
-          <div className="w-56 h-16 xl:w-80 xl:h-20 flex bg-white items-center space-x-7 justify-center font-normal text-2xl leading-6  xl:text-4xl xl:leading-[45px] font-grotesk">
-            <p>DISCOVER</p>
-            <div className="hidden xl:flex">
-              <LandingArrow width={35} height={35} />
+
+          <Link href="/gamescreen" className="no-underline">
+            <div className="w-56 h-16 xl:w-80 xl:h-20 flex bg-white cursor-pointer items-center space-x-7 justify-center font-normal text-2xl leading-6  xl:text-4xl xl:leading-[45px] font-grotesk">
+              <p>DISCOVER</p>
+              <div className="hidden xl:flex">
+                <LandingArrow width={35} height={35} />
+              </div>
             </div>
-            <div className="xl:hidden">
-              <LandingArrow width={20} height={20} />
-            </div>
-          </div>
+          </Link>
         </div>
         <div className="w-full hidden xl:flex max-w-[36%] h-[663px]">
           <Image
