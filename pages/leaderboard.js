@@ -3,7 +3,7 @@ import LeaderContent from "../components/leader-content";
 
 function Leaderboard() {
   return (
-    <div className="w-full pt-20">
+    <div className="w-full py-20">
       <LeaderContent />
     </div>
   );
