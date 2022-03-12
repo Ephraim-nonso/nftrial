@@ -22,12 +22,12 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="hidden xl:flex space-x-5 text-white text-center font-normal text-4xl leading-[45px]">
-          <li>
+          <li className=" relative before:content-[''] before:absolute before:w-full before:scale-0 before:h-[3px] before:bottom-0 before:right-0 before:bg-[#FF9100] before:origin-bottom-right before:transition-transform before:duration-300 before:ease-out hover:before:scale-100 hover:before:origin-bottom-left ">
             <Link href="/about">
-              <a className="text-red">About Us</a>
+              <a className="">About Us</a>
             </Link>
           </li>
-          <li>
+          <li className=" relative before:content-[''] before:absolute before:w-full before:scale-0 before:h-[3px] before:bottom-0 before:right-0 before:bg-[#FF9100] before:origin-bottom-right before:transition-transform before:duration-300 before:ease-out hover:before:scale-100 hover:before:origin-bottom-left ">
             <Link href="/leaderboard" passHref={true}>
               <a>Leaderboard</a>
             </Link>
@@ -41,14 +41,14 @@ const Navbar = () => {
         </Link>
       </nav>
       <div
-        className={`w-64  h-[100vh] shadow-md bg-[#212529] px-8 top-0 left-0 z-50  absolute ${
+        className={`w-64  h-[100vh] shadow-md bg-[#212529] px-8 top-0 left-0 z-50 xl:hidden  absolute ${
           open ? "absolute" : "hidden"
         }`}
       >
         <ul className="relative  space-y-10 text-white text-left font-normal pt-20 text-2xl leading-6">
-          <li>
+          <li className="">
             <Link href="/about">
-              <a className="text-red">About Us</a>
+              <a className="">About Us</a>
             </Link>
           </li>
           <li>
