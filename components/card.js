@@ -5,12 +5,14 @@ const Card = () => {
     <div className="my-5">
       <div className="flex my-8">
         <div
-          className="h-24 w-10 p-7 cursor-pointer  mx-1 bg-slate-400 shadow-lg "
+          className="h-24 w-10 p-7 cursor-pointer item-center justify-center mx-1 bg-slate-400 shadow-lg "
           onClick={() => {
             alert();
           }}
         >
-          <h4 className="font-medium text-align mx-auto">1A</h4>
+          <h4 className="font-medium text-align mx-auto content-center justify-center">
+            1A
+          </h4>
         </div>
         <div
           className="h-24 w-10 p-7 cursor-pointer  mx-1 bg-slate-400 shadow-lg "

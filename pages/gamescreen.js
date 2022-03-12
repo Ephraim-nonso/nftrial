@@ -23,7 +23,9 @@ function GameScreen() {
           >
             <h4>?</h4>
           </div>
-          <div className="h-96 w-80 p-10 bg-slate-400 mt-5">Hello</div>
+          <div className="h-96 w-80 p-10 bg-slate-400 mt-5 content-center">
+            <h3>Hello</h3>
+          </div>
         </div>
       </div>
     </Container>

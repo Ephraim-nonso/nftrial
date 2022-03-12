@@ -6,7 +6,7 @@ import Image from "next/image";
 function Success() {
   return (
     <Container>
-      <div className="flex justify-between py-12">
+      <div className="flex justify-between py-12 px-7">
         <div>
           <div className="font-cont">
             <h1 className="text-white text-4xl font-bold">Congratulations</h1>
@@ -19,7 +19,6 @@ function Success() {
               height={400}
             />
           </div>
-          s
         </div>
 
         <div className="my-auto">

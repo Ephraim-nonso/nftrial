@@ -3,12 +3,13 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Container } from "../components/container";
 import Navbar from "./../components/navbar";
+import LandingContent from "../components/landing-content";
 
 export default function Home() {
   return (
-    <Container>
+    <div>
       <Navbar />
-      <h1 className="text-3xl font-bold underline">HomePage</h1>
-    </Container>
+      <LandingContent />
+    </div>
   );
 }
