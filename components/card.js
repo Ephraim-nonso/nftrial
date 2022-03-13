@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import "./utils/GameArena.json";
 import gsap from "gsap";
+import { address, alphabet } from "./utils/variables-details";
 
 const Card = () => {
   const [change, setChange] = useState(false);
+  const [score, setScore] = useState(0);
+  const [trials, setTrails] = useState(0);
+  const [showResults, setShowResults] = useState(false);
+  const [showGame, setShowGame] = useState(false);
+  const [loading, setLoader] = React.useState(false);
   const ref = React.useRef([]);
   ref.current = [];
   const addToRefs = (el) => {
@@ -11,23 +17,47 @@ const Card = () => {
       ref.current.push(el);
     }
   };
+  const correctArray = [1, 2, 3, 4, 5, 6];
+  const cardData = [];
+  const randomNumbers = () => {
+    for (let i = 0; i < 18; i++) {
+      let number = Math.floor(Math.random() * 200);
+      let letter = alphabet[Math.floor(Math.random() * 25)];
+      cardData.push(number + letter);
+    }
+  };
+  const check = () => {
+    if (trials < 7) {
+      setTrails((prevState) => prevState + 1);
+      return true;
+    } else {
+      setShowResults(true);
+      return false;
+    }
+  };
+  // randomNumbers();
   React.useEffect(() => {
-    ref.current.forEach(
-      (el) => {
-        const container = el.querySelector("div");
+    ref.current.forEach((el, idx) => {
+      const container = el.querySelector("div");
 
-        el.addEventListener("click", (e) => {
+      el.addEventListener("click", (e) => {
+        const results = check();
+        if (correctArray.includes(idx) && results) {
+          console.log(score + 1);
+          setScore(score + 1);
+          gsap.to(container, { backgroundColor: "green" });
+          console.log(score);
+        } else {
           gsap.to(container, { backgroundColor: "red" });
-        });
-      },
-      [ref]
-    );
-  });
+        }
+      });
+    });
+  }, [ref]);
 
   const flip = () => {
     setChange(!change);
   };
-  const cardData = [
+  const loocardData = [
     {
       value: "1A",
     },
@@ -84,13 +114,13 @@ const Card = () => {
   return (
     <div className="my-5">
       <div className="flex my-8">
-        {cardData.length > 1 &&
-          cardData.map(({ value }) => {
+        {loocardData.length > 1 &&
+          loocardData.map((value, idx) => {
             return (
-              <div key={value} ref={addToRefs}>
+              <div key={idx} ref={addToRefs}>
                 <div className="h-24 p-7 cursor-pointer max-w-sm md:max-w-lg item-center bg-slate-400 justify-center mx-1  shadow-lg hover:border-solid hover:border-2 hover:border-yellow-500">
                   <h4 className="font-medium font-grotesk text-align mx-auto content-center justify-center">
-                    {value}
+                    {value.value}
                   </h4>
                 </div>
               </div>
