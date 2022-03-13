@@ -30,7 +30,7 @@ function Success() {
             <h4 className="text-white tracking-wide text-xl font-medium mb-10">
               You just won:
             </h4>
-            <h2 className="text-4xl text-[#FF9100] font-bold py-3">
+            <h2 className="text-4xl font-vppixel text-[#FF9100] font-bold py-3">
               TERRAFORMA WOMAN
             </h2>
             <p className="w-60 tracking-wide text-white">

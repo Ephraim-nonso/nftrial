@@ -4,15 +4,21 @@ import "./utils/GameArena.json";
 const Card = () => {
   const [change, setChange] = useState(false);
 
-  const flip = () => {
-    setChange(!change);
+  // const flip = () => {
+  //   setChange(!change);
+  // };
+  const ref = [];
+  const addToRefs = (el) => {
+    if (!ref.current.includes(el)) {
+      ref.current.push(el);
+    }
   };
 
   return (
     <div className="my-5">
       <div className="flex my-8">
         <div
-          // style={{ backgroundColor: change ? "red" : "#94A3B8" }}
+          style={{ backgroundColor: change ? "red" : "#94A3B8" }}
           className="h-24 p-7 cursor-pointer max-w-sm md:max-w-lg item-center bg-slate-400 justify-center mx-1  shadow-lg hover:border-solid hover:border-2 hover:border-yellow-500"
           onClick={(e) => {
             setChange(!change);
@@ -24,7 +30,7 @@ const Card = () => {
           </h4>
         </div>
         <div
-          // style={{ backgroundColor: change ? "red" : "#94A3B8" }}
+          style={{ backgroundColor: change ? "red" : "#94A3B8" }}
           className="h-24  p-7 cursor-pointer max-w-sm md:max-w-lg  mx-1 bg-slate-400 shadow-lg hover:border-solid hover:border-2 hover:border-yellow-500"
           onClick={() => {
             setChange(!change);
@@ -33,7 +39,7 @@ const Card = () => {
           <h4 className="font-medium font-grotesk text-align mx-auto">5E</h4>
         </div>
         <div
-          // style={{ backgroundColor: change ? "red" : "#94A3B8" }}
+          style={{ backgroundColor: change ? "red" : "#94A3B8" }}
           className="h-24  p-7 cursor-pointer max-w-sm md:max-w-lg  mx-1 bg-slate-400 shadow-lg hover:border-solid hover:border-2 hover:border-yellow-500"
           onClick={() => {
             setChange(!change);
