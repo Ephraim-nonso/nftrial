@@ -24,12 +24,14 @@ export default function LeaderContent() {
         const signer = provider.getSigner();
         const gameContract = new ethers.Contract(address, Abi.abi, signer);
 
-        const leaders = await gameContract.displayLeaderBoard();
+        const leaders = await gameContract.emitLeaderBoard();
         const eventData = await leaders.wait();
         setLoader(false);
+        console.log(eventData?.events);
         eventData?.events[0]?.args
-          ? setAllLeaders(eventData?.events[0]?.args)
+          ? setAllLeaders(eventData?.events[0]?.args[0])
           : setAllLeaders([]);
+        console.log(allLeaders);
         allLeaders.length > 1 ? setData("full") : setData("empty");
       } else {
         setData("Connect to wallet to view leaderboard");
