@@ -2,9 +2,24 @@ import React, { useState } from "react";
 import Card from "../components/card";
 import { Container } from "../components/container";
 import { BsInfoLg } from "react-icons/bs";
+import { ethers } from "ethers";
 
 function GameScreen() {
   const [open, setOpen] = useState(false);
+
+  const beginGame = async () => {
+    try {
+      const { ethereum } = window;
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        const gameContract = new ethers.Contract(address, Abi.abi, signer);
+        console.log(gameContract);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const openHandler = () => {
     setOpen(!open);
@@ -19,7 +34,7 @@ function GameScreen() {
             </h1>
           </div>
 
-          <Card />
+          <Card startGame={beginGame} />
         </div>
 
         <div className="sm:items-center lg:items-end flex flex-col justify-end">
