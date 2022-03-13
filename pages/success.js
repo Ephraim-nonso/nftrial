@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "../components/container";
 import win from "../assests/win.svg";
 import Image from "next/image";
+import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 function Success() {
   return (
@@ -43,11 +44,13 @@ function Success() {
               <p className="font-normal">2.00 ETH</p>
             </div>
             <div className="flex mt-10">
-              <button class="px-5 py-2 text-sm text-black font-semibold rounded-full border bg-white hover:text-white hover:bg-transparent  hover:border-white focus:outline-none focus:ring-2 focus:ring-white-600 focus:ring-offset-2">
+              <button class="flex items-center px-10 py-2 text-sm text-black font-semibold rounded-full border bg-white hover:text-white hover:bg-transparent  hover:border-white focus:outline-none focus:ring-2 focus:ring-white-600 focus:ring-offset-2">
                 CLAIM
+                <BsArrowRight className="ml-3" font-size={20} />
               </button>
-              <button class="px-5 mx-5 py-2 text-sm text-white font-semibold rounded-full border bg-green-600  hover:text-green-600 hover:bg-transparent hover:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2">
+              <button class="flex px-10 mx-5 py-2 text-sm text-white font-semibold rounded-full border bg-green-600  hover:text-green-600 hover:bg-transparent hover:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2">
                 OPENSEA
+                <BsArrowRight className="ml-3" font-size={20} />
               </button>
             </div>
           </div>
