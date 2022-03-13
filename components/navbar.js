@@ -14,7 +14,7 @@ const Navbar = () => {
       const accounts = await ethereum.request({ method: "eth_accounts" });
       if (accounts.length !== 0) {
         const account = accounts[0];
-        setConnected("Connected");
+        setConnected("Connect a Wallet");
       } else {
         setConnected("Connect Wallet");
       }
