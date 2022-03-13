@@ -4,6 +4,7 @@ import { Container } from "./container";
 import LandingImage from "../assests/landing-page-image.png";
 import { LandingArrow } from "./landing-arrow";
 import Link from "next/link";
+// import SplitImages from "./SplitImages";
 
 export default function LandingContent() {
   const details = [
@@ -35,7 +36,7 @@ export default function LandingContent() {
         </div>
         <div className="w-full xl:max-w-[50%] flex flex-col items-center xl:items-start space-y-7 xl:space-y-5 justify-center">
           <p className="text-white font-normal text-2xl leading-6 xl:leading-[52px] xl:text-3xl font-grotesk">
-            Discover, Showcase & Win{" "}
+            Discover, Showcase & Win
           </p>
           <p className="text-4xl leading-[45px] xl:leading-[80px] text-center xl:text-left xl:text-7xl text-[#FF9100] font-normal">
             Your Favorite African Heritage NFTs
@@ -78,6 +79,8 @@ export default function LandingContent() {
           />
         </div>
       </div>
+
+      {/* <SplitImages /> */}
     </Container>
   );
 }
