@@ -42,7 +42,7 @@ export default function LandingContent() {
           </p>
 
           <Link href="/gamescreen" className="no-underline" passHref>
-            <div className="w-56 h-16 xl:w-80 xl:h-20 flex rounded-xl bg-white cursor-pointer items-center space-x-7 justify-center font-normal text-2xl leading-6  xl:text-4xl xl:leading-[45px] font-grotesk">
+            <div className="w-56 h-16 xl:w-80 xl:h-20 flex rounded-xl bg-[#55A630] text-white hover:opacity-80 cursor-pointer items-center space-x-7 justify-center font-normal text-2xl leading-6  xl:text-4xl xl:leading-[45px] font-grotesk">
               <p>Explore</p>
               <div className="hidden xl:flex">
                 <LandingArrow width={35} height={35} />

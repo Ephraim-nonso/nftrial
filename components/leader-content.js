@@ -27,7 +27,7 @@ export default function LeaderContent() {
         const leaders = await gameContract.emitLeaderBoard();
         const eventData = await leaders.wait();
         setLoader(false);
-        console.log(eventData?.events);
+        // console.log(eventData?.events);
         eventData?.events[0]?.args
           ? setAllLeaders(eventData?.events[0]?.args[0])
           : setAllLeaders([]);

@@ -7,7 +7,7 @@ import Abi from "./utils/GameArena.json";
 import { data } from "autoprefixer";
 
 const Card = ({ startGame }) => {
-  const [randomArray, setrandomArray] = React.useState([]);
+  const [randomArray, setRandomArray] = useState([]);
   const [change, setChange] = useState(false);
   const [score, setScore] = useState(0);
   const [trials, setTrails] = useState(0);
@@ -15,6 +15,7 @@ const Card = ({ startGame }) => {
   const [showGame, setShowGame] = useState(false);
   const [loading, setLoader] = React.useState(false);
   const ref = React.useRef([]);
+  const dataSet = [];
   ref.current = [];
   const addToRefs = (el) => {
     if (!ref.current.includes(el)) {
@@ -34,14 +35,15 @@ const Card = ({ startGame }) => {
         const shuffledArray = await gameContract.shuffleCards();
         const eventData = await shuffledArray.wait();
         const data = eventData?.events[0]?.args[0];
-        console.log(data);
         setLoader(false);
         if (data) {
-          let dataSet = [];
-          for (i = 0; i < data.length; i++) [dataSet.push(data[i].toNumber())];
-          setrandomArray(dataSet);
+          console.log(data.length);
+          for (let i = 0; i < data.length; i++) {
+            dataSet.push(data[i].toNumber());
+          }
         }
-        console.log(randomArray);
+        setRandomArray(randomArray.concat(dataSet));
+        setShowGame(true);
       } else {
         setData("Connect to wallet to Play");
       }
@@ -56,7 +58,6 @@ const Card = ({ startGame }) => {
 
   React.useEffect(() => {
     const sendScore = async () => {
-      setLoader(true);
       try {
         const { ethereum } = window;
         if (ethereum) {
@@ -88,13 +89,6 @@ const Card = ({ startGame }) => {
     myStateRef.current = data;
   };
   let addTrail = false;
-  const randomNumbers = () => {
-    for (let i = 0; i < 18; i++) {
-      let number = Math.floor(Math.random() * 200);
-      let letter = alphabet[Math.floor(Math.random() * 25)];
-      cardData.push(number + letter);
-    }
-  };
 
   const check = () => {
     if (trials < 7) {
@@ -114,8 +108,7 @@ const Card = ({ startGame }) => {
         const container = el.querySelector("div");
         const handle = () => {
           const results = check();
-          console.log(correctArray.includes(idx));
-          if (correctArray.includes(idx) && results) {
+          if (dataSet.includes(idx) && results) {
             setMyState(true);
             setScore((score) => score + 1);
             console.log(score);
@@ -216,7 +209,7 @@ const Card = ({ startGame }) => {
                 cy="12"
                 r="10"
                 stroke="currentColor"
-                stroke-width="4"
+                strokeWidth="4"
               ></circle>
               <path
                 className="opacity-75"
@@ -226,18 +219,20 @@ const Card = ({ startGame }) => {
             </svg>
           </div>
         )}
-        {loocardData.length > 1 &&
-          loocardData.map((value, idx) => {
-            return (
-              <div key={idx} ref={addToRefs}>
-                <div className="sm:mb-2 h-24 p-7 cursor-pointer max-w-sm md:max-w-lg item-center bg-slate-400 justify-center mx-1  shadow-lg hover:border-solid hover:border-2 hover:border-yellow-500">
-                  <h4 className="font-medium font-grotesk text-align mx-auto content-center justify-center">
-                    {value.value}
-                  </h4>
+        <div className={`${showGame ? "flex" : "hidden"}`}>
+          {loocardData.length > 1 &&
+            loocardData.map((value, idx) => {
+              return (
+                <div key={idx} ref={addToRefs}>
+                  <div className="sm:mb-2 h-24 p-7 cursor-pointer max-w-sm md:max-w-lg item-center bg-slate-400 justify-center mx-1  shadow-lg hover:border-solid hover:border-2 hover:border-yellow-500">
+                    <h4 className="font-medium font-grotesk text-align mx-auto content-center justify-center">
+                      {value.value}
+                    </h4>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+        </div>
         {/* <div
           // style={{ backgroundColor: change ? "red" : "#94A3B8" }}
           className="h-24  p-7 cursor-pointer max-w-sm md:max-w-lg  mx-1 bg-slate-400 shadow-lg hover:border-solid hover:border-2 hover:border-yellow-500"

@@ -57,7 +57,7 @@ const Navbar = () => {
         </ul>
 
         <Link href="/wallet" passHref>
-          <div className=" cursor-pointer rounded-xl hidden xl:flex items-center justify-center text-2xl leading-7 font-normal bg-[#55A630] text-white w-56 h-16">
+          <div className=" cursor-pointer hover:opacity-80 rounded-xl hidden xl:flex items-center justify-center text-2xl leading-7 font-normal bg-[#55A630] text-white w-56 h-16">
             <h4>{connected}</h4>
           </div>
         </Link>
@@ -81,7 +81,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link href="/wallet" passHref>
-                <div className=" cursor-pointer rounded-xl flex items-center justify-center text-sm leading-6 font-normal bg-[#55A630] text-white w-32 h-14">
+                <div className=" cursor-pointer rounded-xl flex items-center justify-center text-sm leading-6 font-normal bg-[#55A630] hover:opacity-80 text-white w-32 h-14">
                   <h4>{connected}</h4>
                 </div>
               </Link>
