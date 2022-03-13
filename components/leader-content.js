@@ -38,17 +38,17 @@ export default function LeaderContent() {
   return (
     <Container>
       <div className="flex items-center space-x-5 xl:space-x-20 font-grotesk">
-        <div className="hidden cursor-pointer xl:flex">
+        <div className="hidden cursor-pointer md:flex">
           <Link href="/" passHref={true}>
             <BackArrow width={42} height={65} />
           </Link>
         </div>
-        <div className="cursor-pointer xl:hidden">
+        <div className="cursor-pointer md:hidden">
           <Link href="/" passHref={true} className="cursor-pointer xl:hidden">
             <BackArrow width={20} height={25} />
           </Link>
         </div>
-        <p className="text-2xl leading-6 xl:text-6xl xl:leading-[82px] font-normal text-white">
+        <p className="text-2xl leading-6 md:text-6xl md:leading-[82px] font-normal text-white">
           Leaderboards
         </p>
       </div>
