@@ -9,8 +9,9 @@ module.exports = {
         "background-pattern": "url('/assests/bg-image.png')",
       }),
       fontFamily: {
-        grotesk: ['Space Grotesk', 'sans-serif']
-      }
+        grotesk: ["Space Grotesk", "sans-serif"],
+        vppixel: ["VPPixel-Simplified", "sans-serif"],
+      },
     },
   },
   plugins: [],

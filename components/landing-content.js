@@ -38,7 +38,7 @@ export default function LandingContent() {
           <p className="text-white font-normal text-2xl leading-6 xl:leading-[52px] xl:text-3xl font-grotesk">
             Discover, Showcase & Win
           </p>
-          <p className="text-4xl leading-[45px] xl:leading-[80px] text-center xl:text-left xl:text-7xl text-[#FF9100] font-normal">
+          <p className="text-4xl font-vppixel leading-[45px] xl:leading-[80px] text-center xl:text-left xl:text-7xl text-[#FF9100] font-normal">
             Your Favorite African Heritage NFTs
           </p>
 
@@ -62,7 +62,7 @@ export default function LandingContent() {
                     className="max-w-[150px] w-full text-white text-center font-normal text-4xl leading-[45px] uppercase"
                   >
                     <p>{value}</p>
-                    <p className="leading-[52px]">{description}</p>
+                    <p className="leading-[52px] font-vppixel">{description}</p>
                   </div>
                 );
               })}
