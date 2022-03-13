@@ -4,7 +4,6 @@ import { Container } from "./container";
 import LandingImage from "../assests/landing-page-image.png";
 import { LandingArrow } from "./landing-arrow";
 import Link from "next/link";
-// import SplitImages from "./SplitImages";
 
 export default function LandingContent() {
   const details = [
@@ -79,8 +78,6 @@ export default function LandingContent() {
           />
         </div>
       </div>
-
-      {/* <SplitImages /> */}
     </Container>
   );
 }

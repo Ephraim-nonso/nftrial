@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./utils/GameArena.json";
 
 const Card = () => {
   const [change, setChange] = useState(false);
