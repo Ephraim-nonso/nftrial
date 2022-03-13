@@ -10,8 +10,8 @@ export const Hamburger = (props) => {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path d="M3.5 2H35.5" stroke="white" stroke-width="3" />
-      <path d="M11.5 10L35.5 10" stroke="white" stroke-width="3" />
+      <path d="M3.5 2H35.5" stroke="white" strokeWidth="3" />
+      <path d="M11.5 10L35.5 10" stroke="white" strokeWidth="3" />
     </svg>
   );
 };

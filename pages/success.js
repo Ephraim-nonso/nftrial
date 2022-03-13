@@ -30,7 +30,7 @@ function Success() {
             <h4 className="text-white tracking-wide text-xl font-medium mb-10">
               You just won:
             </h4>
-            <h2 className="text-4xl text-[#FF9100] font-bold py-3">
+            <h2 className="text-4xl font-vppixel text-[#FF9100] font-bold py-3">
               TERRAFORMA WOMAN
             </h2>
             <p className="w-60 tracking-wide text-white">
@@ -44,11 +44,11 @@ function Success() {
               <p className="font-normal">2.00 ETH</p>
             </div>
             <div className="flex mt-10">
-              <button class="flex items-center px-10 py-2 text-sm text-black font-semibold rounded-full border bg-white hover:text-white hover:bg-transparent  hover:border-white focus:outline-none focus:ring-2 focus:ring-white-600 focus:ring-offset-2">
+              <button className="flex items-center px-10 py-2 text-sm text-black font-semibold rounded-full border bg-white hover:text-white hover:bg-transparent  hover:border-white focus:outline-none focus:ring-2 focus:ring-white-600 focus:ring-offset-2">
                 CLAIM
                 <BsArrowRight className="ml-3" font-size={20} />
               </button>
-              <button class="flex px-10 mx-5 py-2 text-sm text-white font-semibold rounded-full border bg-green-600  hover:text-green-600 hover:bg-transparent hover:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2">
+              <button className="flex px-10 mx-5 py-2 text-sm text-white font-semibold rounded-full border bg-green-600  hover:text-green-600 hover:bg-transparent hover:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2">
                 OPENSEA
                 <BsArrowRight className="ml-3" font-size={20} />
               </button>

@@ -6,7 +6,7 @@ import { address, alphabet } from "./utils/variables-details";
 import Abi from "./utils/GameArena.json";
 import { data } from "autoprefixer";
 
-const Card = () => {
+const Card = ({ startGame }) => {
   const [randomArray, setrandomArray] = React.useState([]);
   const [change, setChange] = useState(false);
   const [score, setScore] = useState(0);
@@ -144,55 +144,58 @@ const Card = () => {
   };
   const loocardData = [
     {
-      value: "1A",
+      value: "1",
     },
     {
-      value: "2A",
+      value: "2",
     },
     {
-      value: "1A",
+      value: "3",
     },
     {
-      value: "1A",
+      value: "4",
     },
     {
-      value: "1A",
+      value: "5",
     },
     {
-      value: "1A",
+      value: "6",
     },
     {
-      value: "1A",
+      value: "7",
     },
     {
-      value: "1A",
+      value: "8",
     },
     {
-      value: "1A",
+      value: "9",
     },
     {
-      value: "1A",
+      value: "10",
     },
     {
-      value: "1A",
+      value: "11",
     },
     {
-      value: "1A",
+      value: "12",
     },
     {
-      value: "1A",
+      value: "13",
     },
     {
-      value: "1A",
+      value: "14",
     },
     {
-      value: "1A",
+      value: "15",
     },
     {
-      value: "1A",
+      value: "16",
     },
     {
-      value: "1A",
+      value: "17",
+    },
+    {
+      value: "18",
     },
   ];
 
@@ -227,7 +230,7 @@ const Card = () => {
           loocardData.map((value, idx) => {
             return (
               <div key={idx} ref={addToRefs}>
-                <div className="h-24 p-7 cursor-pointer max-w-sm md:max-w-lg item-center bg-slate-400 justify-center mx-1  shadow-lg hover:border-solid hover:border-2 hover:border-yellow-500">
+                <div className="sm:mb-2 h-24 p-7 cursor-pointer max-w-sm md:max-w-lg item-center bg-slate-400 justify-center mx-1  shadow-lg hover:border-solid hover:border-2 hover:border-yellow-500">
                   <h4 className="font-medium font-grotesk text-align mx-auto content-center justify-center">
                     {value.value}
                   </h4>
@@ -245,7 +248,7 @@ const Card = () => {
           <h4 className="font-medium font-grotesk text-align mx-auto">5E</h4>
         </div>
         <div
-          // style={{ backgroundColor: change ? "red" : "#94A3B8" }}
+          style={{ backgroundColor: change ? "red" : "#94A3B8" }}
           className="h-24  p-7 cursor-pointer max-w-sm md:max-w-lg  mx-1 bg-slate-400 shadow-lg hover:border-solid hover:border-2 hover:border-yellow-500"
           onClick={() => {
             setChange(!change);
