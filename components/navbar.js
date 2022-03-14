@@ -12,7 +12,7 @@ const Navbar = () => {
     try {
       const { ethereum } = window;
       const accounts = await ethereum.request({ method: "eth_accounts" });
-      console.log(accounts.length);
+      // console.log(accounts.length);
       if (accounts.length > 1) {
         const account = accounts[0];
         setConnected("Connect a Wallet");
